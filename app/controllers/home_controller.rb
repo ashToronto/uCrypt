@@ -1,13 +1,32 @@
 class HomeController < ApplicationController
   def index
-    require 'net/http'
-    require 'json'
-    @url = 'https://api.coinmarketcap.com/v1/ticker/'
-    @uri = URI(@url)
-    @response = Net::HTTP.get(@uri)
+    api_call
     @coins = JSON.parse(@response)
   end
 
   def about
   end
+
+  def lookup
+    api_call
+    @lookup_coin = JSON.parse(@response)
+    @symbol = params[:sym]
+
+    if @symbol
+      @symbol = @symbol.upcase
+    end
+
+    if @symbol == ''
+      @symbol = 'Please enter a currency symbol'
+    end
+  end
+
+  private
+    def api_call
+      require 'net/http'
+      require 'json'
+      @url = 'https://api.coinmarketcap.com/v1/ticker/'
+      @uri = URI(@url)
+      @response = Net::HTTP.get(@uri)
+    end
 end

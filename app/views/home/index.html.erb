@@ -1,6 +1,14 @@
 <h1>Welcome to uCrypt</h1>
 <p>Check out the top 100 currencies</p>
 
-<div>
-  <%= @coins %>
-</div>
+  <div>
+    <% @coins.each do |x| %>
+    <%= x['symbol'] %></br>
+      <%= x['name'] %></br>
+      $<%= x['price_usd'] %></br>
+      last hour: <%= x['percent_change_1h'] %>%</br>
+      24h: <%= x['percent_change_24h'] %>%</br>
+      7 days: <%= x['percent_change_7d'] %>%</br>
+    </br>
+    <% end %>
+  </div>

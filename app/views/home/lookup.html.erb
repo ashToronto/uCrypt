@@ -1,0 +1,22 @@
+<h3>Look Up Currency</h3>
+  <%= form_tag home_lookup_path, :method => 'POST' do %>
+    <%= text_field_tag 'sym', nil, paceholder: 'enter crypto symbol', size: 50 %>
+      <%= submit_tag 'look up information'%>
+    <% end %>
+  </form>
+</br>
+
+<div>
+  <% if @symbol %>
+    <% @lookup_coin.each do |x| %>
+      <% if @symbol == x['symbol']%>
+        <%= x['symbol'] %></br>
+        <%= x['name'] %></br>
+        $<%= x['price_usd'] %></br>
+        last hour: <%= x['percent_change_1h'] %>%</br>
+        24h: <%= x['percent_change_24h'] %>%</br>
+        7 days: <%= x['percent_change_7d'] %>%</br>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
