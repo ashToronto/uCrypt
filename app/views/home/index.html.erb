@@ -1,14 +1,15 @@
 <h1>Welcome to uCrypt</h1>
 <p>Check out the top 100 currencies</p>
 
-  <div>
-    <% @coins.each do |x| %>
-    <%= x['symbol'] %></br>
-      <%= x['name'] %></br>
-      $<%= x['price_usd'] %></br>
-      last hour: <%= x['percent_change_1h'] %>%</br>
-      24h: <%= x['percent_change_24h'] %>%</br>
-      7 days: <%= x['percent_change_7d'] %>%</br>
-    </br>
-    <% end %>
+<% @coins.each do |id, coin| %>
+  <div class='container'>
+    <img alt="" src='https://s2.coinmarketcap.com/static/img/coins/16x16/<%= id %>.png'/></br>
+    <%= coin['name'] %></br>
+    <%= coin['symbol'] %></br>
+      $<%= coin['quotes']['USD']['price'] %></br>
+      last hour: <%= coin['quotes']['USD']['percent_change_1h'] %>%</br>
+      24h: <%= coin['quotes']['USD']['percent_change_24h'] %>%</br>
+      7 days: <%= coin['quotes']['USD']['percent_change_7d'] %>%</br>
+      </br>
   </div>
+<% end %>

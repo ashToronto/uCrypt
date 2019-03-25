@@ -8,14 +8,18 @@
 
 <div>
   <% if @symbol %>
-    <% @lookup_coin.each do |x| %>
-      <% if @symbol == x['symbol']%>
-        <%= x['symbol'] %></br>
-        <%= x['name'] %></br>
-        $<%= x['price_usd'] %></br>
-        last hour: <%= x['percent_change_1h'] %>%</br>
-        24h: <%= x['percent_change_24h'] %>%</br>
-        7 days: <%= x['percent_change_7d'] %>%</br>
+    <% @lookup_coin.each do |id, coin| %>
+      <% if @symbol == coin['symbol']%>
+      <div class='container'>
+        <img alt="" src='https://s2.coinmarketcap.com/static/img/coins/16x16/<%= id %>.png'/></br>
+        <%= coin['name'] %></br>
+        <%= coin['symbol'] %></br>
+          $<%= coin['quotes']['USD']['price'] %></br>
+          last hour: <%= coin['quotes']['USD']['percent_change_1h'] %>%</br>
+          24h: <%= coin['quotes']['USD']['percent_change_24h'] %>%</br>
+          7 days: <%= coin['quotes']['USD']['percent_change_7d'] %>%</br>
+          </br>
+      </div>
       <% end %>
     <% end %>
   <% end %>

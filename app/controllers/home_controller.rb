@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     api_call
-    @coins = JSON.parse(@response)
+    @coins = JSON.parse(@response)['data']
   end
 
   def about
@@ -9,7 +9,7 @@ class HomeController < ApplicationController
 
   def lookup
     api_call
-    @lookup_coin = JSON.parse(@response)
+    @lookup_coin = JSON.parse(@response)['data']
     @symbol = params[:sym]
 
     if @symbol
@@ -25,7 +25,7 @@ class HomeController < ApplicationController
     def api_call
       require 'net/http'
       require 'json'
-      @url = 'https://api.coinmarketcap.com/v1/ticker/'
+      @url = 'https://api.coinmarketcap.com/v2/ticker/'
       @uri = URI(@url)
       @response = Net::HTTP.get(@uri)
     end
