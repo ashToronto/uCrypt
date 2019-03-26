@@ -1,6 +1,6 @@
 <h3>Look Up Currency</h3>
   <%= form_tag home_lookup_path, :method => 'POST' do %>
-    <%= text_field_tag 'sym', nil, paceholder: 'enter crypto symbol', size: 50 %>
+    <%= text_field_tag 'sym', nil, paceholder: 'enter crypto symbol e.g btc', size: 50 %>
       <%= submit_tag 'look up information'%>
     <% end %>
   </form>
