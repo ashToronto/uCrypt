@@ -1,15 +1,42 @@
-<h1>Welcome to uCrypt</h1>
 <p>Check out the top 100 currencies</p>
+<p>Click to view their inforgraphy</p>
+
+
+<div class="modal fade" id="chart-wrapper">
+  <div class="modal-content" width="3" height="1">
+      <canvas id="myChart"></canvas>
+  </div>
+  <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="dismissChart" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+</div>
+
 
 <% @coins.each do |id, coin| %>
-  <div class='container'>
-    <img alt="" src='https://s2.coinmarketcap.com/static/img/coins/16x16/<%= id %>.png'/></br>
-    <%= coin['name'] %></br>
-    <%= coin['symbol'] %></br>
-      $<%= coin['quotes']['USD']['price'] %></br>
-      last hour: <%= coin['quotes']['USD']['percent_change_1h'] %>%</br>
-      24h: <%= coin['quotes']['USD']['percent_change_24h'] %>%</br>
-      7 days: <%= coin['quotes']['USD']['percent_change_7d'] %>%</br>
-      </br>
-  </div>
+<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+  <div class="card">
+  <div class="wrapper">
+    <div class='coin-symb'>
+      <div class="wrapper-coin-symb">
+    <h5 class="card-title">
+      <img class="img-fluid" alt="" src='https://s2.coinmarketcap.com/static/img/coins/16x16/<%= id %>.png'/>
+    <%= coin['name'] %>
+  </h5></br>
+    </div>
+  </div></br>
+  <div class="card-body">
+    <p id="coin"><%= coin['symbol'] %></p></br>
+      $<span><%= coin['quotes']['USD']['price'] %></span></br>
+      <span>last hour: <%= coin['quotes']['USD']['percent_change_1h'] %></span>%</br>
+      <span>24h: <%= coin['quotes']['USD']['percent_change_24h'] %>%</span></br>
+      <span id="last_7_days_quote">7 days: <%= coin['quotes']['USD']['percent_change_7d'] %>%</span></br>
+      <button class="btn btn-info btn-xs">
+        <span class="glyphicon glyphicon-stats">
+        </span>
+      </button>
+      </div>
+    </div>
+    </div>
+</div>
 <% end %>

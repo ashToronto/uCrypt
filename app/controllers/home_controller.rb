@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
+
+  # before_action :authenticate_user!
+
   def index
     api_call
     @coins = JSON.parse(@response)['data']

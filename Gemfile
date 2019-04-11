@@ -33,6 +33,12 @@ gem 'jbuilder', '~> 2.5'
 # Authentication and security
 gem 'devise'
 
+#jQuerry
+gem 'jquery-rails'
+
+#Chart js
+gem 'chart-js-rails'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

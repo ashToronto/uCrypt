@@ -1,3 +1,18 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.wrapper {
+  margin-bottom: 7vh;
+  padding: 1vh;
+  border: 1px solid;
+  border-radius: 1vh;
+  box-shadow: 5px 5px;
+  justify-content: center;
+}
+
+.coin-symb {
+  padding: 0.5vh;
+  height: 3vh;
+  justify-content: center;
+}
