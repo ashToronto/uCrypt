@@ -1,0 +1,10 @@
+<p>Check out the news</p>
+
+<% @news.each do |source| %>
+    <img src=<%= source['urlToImage'] %>>
+    <a href="<%= source['url'] %>"><%= source['title'] %></a>
+    <p><%= source['description'] %></p>
+    <p><%= source['content'] %></p>
+    <p><%= source['publishedAt'] %></p>
+    <p><%= source['author'] %></p>
+<% end %>

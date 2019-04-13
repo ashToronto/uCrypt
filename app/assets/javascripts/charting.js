@@ -19,10 +19,8 @@ $('document').ready(function() {
           yAxis_high.push(t.high)
           yAxis_low.push(t.low)
         })
-        // Create chart data points
-        // Create line chart
-        const ctx = document.getElementById('myChart');
-        const myChart = new Chart(ctx, {
+        const ctx = document.getElementById('myChart'); // Create chart data points
+        const myChart = new Chart(ctx, { // Create line chart
           type: 'line',
           data:
           {
@@ -52,10 +50,9 @@ $('document').ready(function() {
           }
         });
         $('#chart-wrapper').modal('show');
-        $('#dismissChart').click(function() {
+        $('#dismissChart').click(function() { //Delete old chart instances
           myChart.destroy()
         });
-        // window.scrollTo({ top: 0, behavior: 'smooth' })
       });
   });
 })

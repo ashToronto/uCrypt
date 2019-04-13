@@ -8,7 +8,7 @@
   </div>
   <div class="modal-footer">
         <button type="button" class="btn btn-secondary" id="dismissChart" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">$ Buy $</button>
       </div>
 </div>
 
@@ -25,14 +25,21 @@
   </h5></br>
     </div>
   </div></br>
-  <div class="card-body">
+  <div>
+  <% if coin['quotes']['USD']['percent_change_7d'] >= 0 %>
+    <span class="glyphicon glyphicon-triangle-top" style="color:green;"></span>
+    <% else %>
+    <span class="glyphicon glyphicon-triangle-bottom" style="color:red;"></span>
+  <% end %>
+  </div>
+  <div class="card-body" id="card_body">
     <p id="coin"><%= coin['symbol'] %></p></br>
       $<span><%= coin['quotes']['USD']['price'] %></span></br>
       <span>last hour: <%= coin['quotes']['USD']['percent_change_1h'] %></span>%</br>
       <span>24h: <%= coin['quotes']['USD']['percent_change_24h'] %>%</span></br>
       <span id="last_7_days_quote">7 days: <%= coin['quotes']['USD']['percent_change_7d'] %>%</span></br>
-      <button class="btn btn-info btn-xs">
-        <span class="glyphicon glyphicon-stats">
+      <button class="btn btn-success btn-xs">
+        <span class="glyphicon glyphicon-plus">
         </span>
       </button>
       </div>

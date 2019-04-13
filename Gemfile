@@ -39,6 +39,9 @@ gem 'jquery-rails'
 #Chart js
 gem 'chart-js-rails'
 
+#Store and read ENV files in application yml
+gem 'figaro'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

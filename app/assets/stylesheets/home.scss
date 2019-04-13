@@ -16,3 +16,18 @@ div.wrapper {
   height: 3vh;
   justify-content: center;
 }
+
+div#card_body {
+  padding: 1vh;
+}
+
+.card:hover
+{
+        background:#53a7ea;
+        box-shadow:
+               1px 1px #53a7ea,
+               2px 2px #53a7ea,
+               3px 3px #53a7ea;
+       -webkit-transform: translateX(-3px);
+       transform: translateX(-3px);
+}
