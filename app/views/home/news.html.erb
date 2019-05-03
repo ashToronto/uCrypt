@@ -1,10 +1,17 @@
-<p>Check out the news</p>
+<h2>Check out the news</h2>
+  <% @news.each do |source| %>
+    <div class="list-group">
+    <div class="container-fluid">
+      <div class="row" >
+        <a href="<%= source['url'] %>" class="list-group-item active" style="min-height: 20rem;">
+          <img class="img-rounded" alt="responsive-image" style="width: 22rem; float:left; margin: 2rem" src=<%= source['urlToImage'] %>>
+              <h4 class="list-group-item-heading"><%= source['description']%></h4>
+              <p class="list-group-item-text"><%= source['content'] %></p>
+              <p><%= source['publishedAt'] %></p>
+              <p><%= source['author'] %></p>
+        </a>
+      </div>
+    </div>
+  </div>
 
-<% @news.each do |source| %>
-    <img src=<%= source['urlToImage'] %>>
-    <a href="<%= source['url'] %>"><%= source['title'] %></a>
-    <p><%= source['description'] %></p>
-    <p><%= source['content'] %></p>
-    <p><%= source['publishedAt'] %></p>
-    <p><%= source['author'] %></p>
-<% end %>
+  <% end %>
