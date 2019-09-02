@@ -19,3 +19,13 @@ bundle install
 
 then setup postgres and conduct migrations:
 rails db:migrate
+
+# Ucrypt
+
+![""](https://github.com/ashToronto/uCrypt/blob/master/docs/Screen%20Shot%202019-09-01%20at%2010.01.21%20PM.png?raw=true)
+![""](https://github.com/ashToronto/uCrypt/blob/master/docs/Screen%20Shot%202019-09-01%20at%2010.02.08%20PM.png?raw=true)
+![""](https://github.com/ashToronto/uCrypt/blob/master/docs/Screen%20Shot%202019-09-01%20at%2010.03.59%20PM.png?raw=true)
+![""](https://github.com/ashToronto/uCrypt/blob/master/docs/Screen%20Shot%202019-09-01%20at%2010.04.21%20PM.png?raw=true)
+![""](https://github.com/ashToronto/uCrypt/blob/master/docs/Screen%20Shot%202019-09-01%20at%2010.03.07%20PM.png?raw=true)
+![""](https://github.com/ashToronto/uCrypt/blob/master/docs/Screen%20Shot%202019-09-01%20at%2010.03.07%20PM.png?raw=true)
+![""](https://github.com/ashToronto/uCrypt/blob/master/docs/Screen%20Shot%202019-09-01%20at%2010.02.22%20PM.png?raw=true)
