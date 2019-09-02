@@ -7,5 +7,6 @@ Rails.application.routes.draw do
       get :news
       post :lookup
   end
+
   root to: 'home#index'
 end
