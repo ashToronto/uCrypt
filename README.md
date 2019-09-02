@@ -1,9 +1,10 @@
-# README
+# uCrypt
 
-#uCrypt
-A user dashboard that shows the top traded cryotos in the market. You can visualise currency historicity in the form of chartjs line charts. Also included is a crypto news bulletin that keeps you informed of recent updates in the crypto industry. Mobile responsive.   
+A user dashboard that shows the top traded cryotos in the market. You can visualise currency historicity in the form of chartjs line charts. Also included is a crypto news bulletin that keeps you informed of recent updates in the crypto industry. Mobile responsive. Bootstrap mobile responsive as well for good measure. This is a good layout if you're looking to build a virtual simulator in future.
 
-#Getting started
+Please drop a star if you found this useful.
+
+## Getting started
 
 you will need to get api key for the news api at newsapi.org
 Create your own config/application.yml file and type in:
@@ -15,12 +16,13 @@ Then clone or fork this repository
 make sure you are using ruby 2.4.4, if not use rvm and switch over
 
 When ready, run:
-bundle install
+```bundle install```
 
-then setup postgres and conduct migrations:
-rails db:migrate
+Make sure you have postgres and conduct migrations:
+```rails db:create```
+```rails db:migrate```
 
-# Ucrypt
+# Preview
 
 ![""](https://github.com/ashToronto/uCrypt/blob/master/docs/Screen%20Shot%202019-09-01%20at%2010.01.21%20PM.png?raw=true)
 ![""](https://github.com/ashToronto/uCrypt/blob/master/docs/Screen%20Shot%202019-09-01%20at%2010.02.08%20PM.png?raw=true)
